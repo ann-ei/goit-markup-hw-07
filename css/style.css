@@ -423,24 +423,24 @@ textarea {
   margin-bottom: 50px;
 }
 
-.services-images .services-item {
+.services-list__item {
   display: inline-block;
 }
-.services-images {
+.services-list {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
   margin-top: -30px;
 }
-.services-images > .services-item {
+.services-list__item {
   flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
 }
-.services-item {
+.services-list__item {
   position: relative;
 }
-.services-overlay {
+.services-list__overlay {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -461,14 +461,14 @@ textarea {
 .our-team {
   background-color: #f5f4fa;
 }
-.team-people {
+.team {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
   margin-top: -30px;
 }
 
-.team-people > .item {
+.team__item {
   flex-basis: calc(100% / 4 - 30px);
   margin-left: 30px;
   margin-top: 30px;
@@ -481,7 +481,7 @@ textarea {
 .team-content {
   padding: 30px 0;
 }
-.team-people h3 {
+.team-content__name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
@@ -490,18 +490,18 @@ textarea {
   display: block;
   margin-bottom: 10px;
 }
-.team-people span {
+.team-content__descr {
   font-size: 16px;
   line-height: 1.2;
   letter-spacing: 0.03em;
   color: var(--descr-color);
 }
-.team-social-box {
+.team-social {
   display: flex;
   justify-content: center;
   margin-top: 16px;
 }
-.team-social-link {
+.team-social__link {
   margin-right: 10px;
   display: flex;
   width: 44px;
@@ -512,84 +512,90 @@ textarea {
   border-radius: 50%;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.team-social-link:last-child {
+.team-social__link:last-child {
   margin-right: 0;
 }
-.team-social-icon {
+.team-social__icon {
   fill: #ccc;
 }
-.team-social-link:hover {
+.team-social__link:hover {
   background-color: var(--accent-color);
 
   fill: #fff;
 }
-.team-social-link:hover .team-social-icon {
+.team-social__link:hover .team-social__icon {
   fill: #fff;
 }
 /*clients*/
-.clients-box {
+.clients-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.clients-link {
+.clients-list__link {
   border: 1px solid var(--border);
   border-radius: 4px;
   padding: 16px 32px;
   display: block;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.clients-icon {
+.clients-list__icon {
   fill: #afb1b8;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.clients-link:hover {
+.clients-list__link:hover {
   border: 1px solid var(--accent-color);
 }
-.clients-link:hover .clients-icon {
+.clients-list__link:hover .clients-list__icon {
   fill: var(--accent-color);
 }
 /*footer*/
 .footer {
   background-color: var(--darkest-color);
+  padding: 60px 0;
 }
-.logo-footer {
+.footer-logo {
   color: var(--footer-color);
   margin-bottom: 20px;
   display: block;
 }
 
-.footer .footer-contacts a:hover {
-  color: var(--accent-color);
-}
-.footer-adress .item {
+.footer-adress__item {
   display: block;
   margin-bottom: 10px;
-}
-.footer-adress .item:last-child {
-  margin-bottom: 0;
-}
-.footer-adress a {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--footer-color);
   font-style: normal;
 }
-.footer-contacts a {
+.footer-adress__item:last-child {
+  margin-bottom: 0;
+}
+
+.footer-contacts__link {
   font-weight: normal;
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.5;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  font-style: normal;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-contacts__link:hover {
+  color: var(--accent-color);
 }
 .footer-contact-box {
   margin-right: 70px;
 }
-.footer {
-  padding: 60px 0;
+.footer-contacts__item {
+  margin-bottom: 10px;
 }
-.footer .footer-contacts {
+.footer-contacts__item:last-child {
+  margin-bottom: 0;
+}
+.footer-contacts {
   display: block;
 }
 .footer-container {
@@ -599,7 +605,7 @@ textarea {
   margin-top: 12px;
   margin-right: 93px;
 }
-.footer-title {
+.footer-social-box__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.2;
@@ -616,16 +622,15 @@ textarea {
 }
 .footer-icon-box {
   margin-top: 0;
+  display: flex;
 }
-.footer-link svg {
+.team-social__icon {
   fill: #fff;
 }
 .footer-mailing {
   margin-top: 12px;
 }
-.footer-mailing form {
-  margin-right: 12px;
-}
+
 .footer-input {
   padding: 15px;
   width: 358px;
@@ -644,6 +649,7 @@ textarea {
   align-items: center;
   padding: 10px 29px;
   cursor: pointer;
+  margin-left: 12px;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -664,6 +670,7 @@ textarea {
 }
 .mailing-form {
   display: flex;
+  margin-right: 12px;
 }
 /*PORTFOLIO*/
 .portfolio-filter {
