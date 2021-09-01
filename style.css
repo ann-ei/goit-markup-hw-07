@@ -57,18 +57,6 @@ textarea {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.nav-list__link--active {
-  color: var(--accent-color);
-}
-.nav-list__link--active::after {
-  content: "";
-  height: 3px;
-  background-color: var(--accent-color);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
 
 /*MODAL*/
 
@@ -254,15 +242,28 @@ textarea {
   position: relative;
   margin-right: 50px;
 }
+.nav-list__item:last-child {
+  margin-right: 0;
+}
 .nav-list__link {
   padding-top: 32px;
   padding-bottom: 32px;
   display: block;
 }
 
-.nav-list__item:last-child {
-  margin-right: 0;
+.nav-list__link--active {
+  color: var(--accent-color);
 }
+.nav-list__link--active::after {
+  content: "";
+  height: 3px;
+  background-color: var(--accent-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
